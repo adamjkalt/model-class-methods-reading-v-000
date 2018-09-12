@@ -18,7 +18,6 @@
     <%= select_tag "date", options_for_select(["Today", "Old News"]), include_blank: true %>
 <%= submit_tag "Filter" %>
 <% end %>
-  <% end %>
 </div>
 
 <% @posts.each do |post| %>
