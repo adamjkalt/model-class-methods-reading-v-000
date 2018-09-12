@@ -6,6 +6,7 @@
   <% else %>
     <% @posts = Post.where("created_at <?", Time.zone.today.beginning_of_day) %>
   <% end %>
+<% end %>
 
 <h1>Believe It Or Not I'm Blogging On Air</h1>
 
@@ -17,6 +18,7 @@
     <%= select_tag "date", options_for_select(["Today", "Old News"]), include_blank: true %>
 <%= submit_tag "Filter" %>
 <% end %>
+  <% end %>
 </div>
 
 <% @posts.each do |post| %>
